@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        【艺龙旅行网】酒店预订_机票查询_酒店团购_电话4009-333-333</title>
+    <meta name="robots" content="all" />
+    <meta name="robots" content="index,follow" />
+    <meta name="keywords" content="酒店预订,机票查询,酒店团购,艺龙旅行网" />
+    <meta name="description" content="艺龙网-中国领先的在线旅行服务提供商,纳斯达克上市公司.提供全球20万家酒店预订服务:高星酒店返现101元起,经济酒店返现30元,酒店团购1折起！海外酒店全场9折!低价有房保障-无房赔付首晚房费,差额3倍赔付.订酒店,用艺龙!" />
+    <link rel="icon" href="http://www.elongstatic.com/common/pic/favicon.ico?t=201506030301" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="http://www.elongstatic.com/common/css/el_common.css?t=201506030301" />
+    <link rel="stylesheet" type="text/css" href="http://www.elongstatic.com/home/css/newIndex2015.css?t=201506030301" />
+    <!-- 國際酒店城市輸入框依賴樣式 -->
+    <link rel="stylesheet" type="text/css" href="http://www.elongstatic.com/ihsearch/css/Int_h_index201311.css?t=201407161718" />
+  <style>
+    .branch_menu span a {
+        font-family: Arial, Simsun !important;
+    }
+    /*fold*/
+    
+    .fold_wrap {
+        width: 1200px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    
+    .fold_wrap ul {
+        width: 1200px;
+        height: 260px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .fold_wrap ul li {
+        float: left;
+        width: 130px;
+        height: 260px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    .fold_wrap ul li .mask_b {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, .3);
+        _background: #B2B2B2;
+    }
+    
+    .fold_wrap ul li.active .mask_b {
+        background: none;
+    }
+    
+    .fold_wrap ul li .mask_b h4 {
+        color: #fff;
+        width: 30px;
+        margin: 0 auto;
+        display: block;
+        font: 30px/30px Microsoft Yahei;
+        position: relative;
+        padding: 30px 0 0 0;
+    }
+    
+    .fold_wrap ul li.big {
+        width: 322px;
+    }
+    
+    .fold_wrap ul li .adv_intro {
+        width: 92%;
+        height: 40px;
+        padding: 5px 4%;
+        position: absolute;
+        left: 0;
+        bottom: -50px;
+        background: #37D;
+        color: #FFF;
+        overflow: hidden;
+    }
+    
+    .adv_intro_show {
+        bottom: 0 !important;
+        transition: bottom 0.3s linear 0.3s;
+        -webkit-transition: bottom 0.3s linear 0.3s;
+    }
+    /*termini*/
+    
+    .termini h2 {
+        border-bottom: 2px solid #f55;
+        padding: 5px 0;
+    }
+    
+    .termini h2 a {
+        font: 24px/30px Microsoft yahei;
+        color: #f55;
+    }
+    
+    .termini h2 span {
+        font: 14px/30px Microsoft yahei;
+        color: #999;
+    }
+    
+    .termini h2 b {
+        font: 14px/30px Microsoft yahei;
+        color: #37d;
+        cursor: pointer;
+    }
+    
+    .termini h2 b:hover {
+        color: #f55;
+    }
+    
+    .termini_wrap {
+        overflow: hidden;
+    }
+    
+    .domestic h3 {
+        padding: 10px 0;
+    }
+    
+    .domestic h3 a {
+        font: 18px/26px Microsoft yahei;
+        color: #555;
+    }
+    
+    .domestic h3 span {
+        font: 14px/22px Microsoft yahei;
+        color: #555;
+        padding: 1px 10px;
+        margin: 4px 10px 0;
+        border-radius: 12px;
+        cursor: pointer;
+        float: left;
+    }
+    
+    .domestic h3 span:hover {
+        color: #F66;
+        border: 1px solid #F66;
+        padding: 0 9px;
+    }
+    
+    .domestic h3 span.on {
+        background: #F66;
+        color: #fff;
+    }
+    
+    .domestic h3 .more {
+        position: relative;
+        top: 6px;
+    }
+    
+    .domestic h3 .more a,
+    .discount h3 .more a {
+        color: #555;
+        font: 14px/24px Microsoft yahei;
+    }
+    
+    .domestic h3 .more a b,
+    .discount h3 .more a b {
+        font-family: Simsun;
+        font-weight: normal;
+    }
+    
+    .domestic h3 .more a:hover {
+        color: #f55;
+    }
+    
+    .tab_theme {
+        overflow: hidden;
+        width: 1220px;
+        height: 202px;
+    }
+    
+    .tab_theme li {
+        float: left;
+        width: 293px;
+        margin: 0 10px 0 0;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .tab_theme li.cur .scale_tour {
+        border-bottom: 2px solid #f66;
+    }
+    
+    .tab_theme li .pic_add {
+        height: 160px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .tab_theme li a {
+        display: block;
+        width: 100%;
+    }
+    
+    .tab_theme li img {
+        display: block;
+        width: 100%;
+        margin-top: -20px;
+    }
+    
+    .tab_theme li .city_name {
+        position: absolute;
+        font: 24px/30px Microsoft yahei;
+        color: #fff;
+        top: 124px;
+        left: 0;
+        text-indent: .5em;
+    }
+    
+    .tab_theme li .scale_tour {
+        padding: 5px;
+        background: #f7f7f7;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1px;
+    }
+    
+    .tab_theme li:hover .scale_tour {
+        border-bottom: 2px solid #F66;
+        margin-bottom: 0;
+    }
+    
+    .tab_theme li .scale_tour p {
+        color: #555;
+        font: 14px/30px Microsoft yahei;
+    }
+    
+    .tab_theme li .scale_tour span {
+        font: 14px/14px Microsoft yahei;
+        display: none;
+    }
+    
+    .tab_theme li .scale_tour span b {
+        color: #555;
+        font: 14px/14px Microsoft yahei;
+        position: relative;
+        top: -7px;
+    }
+    
+    .tab_theme li .scale_tour span em {
+        color: #fc6622;
+        font: 24px/30px Microsoft yahei;
+    }
+    
+    .tab_theme li .mask_num {
+        background: rgba(0, 0, 0, .5) !important;
+        background: #000;
+        filter: alpha(opacity=50);
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 40px;
+        margin: 0 0 0 -40px;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font: 18px/24px Microsoft yahei;
+        color: #fce639;
+        display: none;
+        cursor: pointer;
+    }
+    
+    .tab_theme li .mask_num p {
+        padding: 20px 15px;
+    }
+    /*raiders*/
+    
+    .raiders h2 {
+        border-bottom: 2px solid #77cc11;
+        padding: 5px 0;
+    }
+    
+    .raiders h2 a {
+        font: 24px/30px Microsoft yahei;
+        color: #77cc11;
+    }
+    
+    .pic_rad .pic_shaw {
+        width: 600px;
+        height: 222px;
+    }
+    
+    .pic_rad .pic_shaw ul {
+        overflow: hidden;
+    }
+    
+    .pic_rad .pic_shaw li {
+        width: 290px;
+    }
+    
+    .pic_rad .pic_shaw li a {
+        display: block;
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+    }
+    
+    .pic_rad .pic_shaw li img {
+        height: 180px;
+    }
+    
+    .pic_rad .pic_shaw li p {
+        height: 40px;
+        font: 14px/40px Microsoft yahei;
+        background: #f7f7f7;
+        color: #555;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 1px;
+    }
+    
+    .pic_rad .pic_shaw li.cur p {
+        border-bottom: 2px solid #f66;
+        margin-bottom: 0;
+    }
+    
+    .pic_rad .pic_shaw li:hover p {
+        border-bottom: 2px solid #7C1;
+    }
+    
+    .pic_rad .pic_shaw li p a {
+        height: 40px;
+        font: 14px/40px Microsoft yahei;
+        padding: 0 5px;
+        color: #555;
+    }
+    
+    .pic_rad .pic_shaw li p a:hover {
+        color: #F55;
+    }
+    
+    .tab_pic_show {
+        width: 580px;
+        overflow: hidden;
+        position: relative;
+        height: 220px;
+    }
+    
+    .tab_pic_show ul {
+        height: 232px;
+        width: 220px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+    
+    .tab_pic_show ul li {
+        height: 54px;
+        line-height: 54px;
+        width: 232px;
+        position: relative;
+    }
+    
+    .tab_pic_show ul li.on {}
+    
+    .tab_pic_show ul li.on span {
+        width: 12px;
+        height: 19px;
+        display: block;
+        background-position: -547px 0;
+        position: absolute;
+        top: 17px;
+        right: 0px;
+    }
+    
+    .tab_pic_show ul li.on a {
+        background: #89ca00;
+        color: #fff;
+    }
+    
+    .tab_pic_show ul li a {
+        width: 200px;
+        overflow: hidden;
+        height: 57px;
+        font: 14px/57px Microsoft yahei;
+        color: #555;
+        padding: 0 10px;
+        display: block;
+        overflow: hidden;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .tab_pic_show ol {
+        width: 380px;
+        height: 220px;
+        position: absolute;
+        float: left;
+        top: 0;
+        left: 220px;
+        overflow: hidden;
+    }
+    
+    .tab_pic_show ol li {
+        width: 380px;
+        height: 220px;
+    }
+    
+    .tab_pic_show ol li img {}
+    /*coupon*/
+    
+    .coupon_wrap,
+    .smain_list {
+        overflow: hidden;
+    }
+    
+    .coupon h2 {
+        border-bottom: 2px solid #f80;
+        padding: 5px 0;
+    }
+    
+    .coupon h2 a {
+        font: 24px/30px Microsoft yahei;
+        color: #f80;
+    }
+    
+    .coupon_list {
+        width: 1220px;
+        height: 122px;
+    }
+    
+    .coupon_list li {
+        width: 293px;
+        float: left;
+        margin: 0 10px 0 0;
+    }
+    
+    .coupon_list li.right {
+        float: right;
+        margin: 0;
+    }
+    
+    .coupon_list li a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0 10px;
+        border-left: 1px dashed #fff;
+        border-right: 1px dashed #fff;
+    }
+    
+    .coupon_list li a em,
+    .coupon_list li a span {
+        display: block;
+        color: #fff;
+    }
+    
+    .coupon_list li a span {
+        font: 24px/40px Microsoft yahei;
+    }
+    
+    .coupon_list li a em {
+        font: 16px/30px Microsoft yahei;
+    }
+    
+    .coupon_list li .coupon_inf {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        background: #f7f7f7;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .coupon_list li .coupon_inf b {
+        float: right;
+        color: #555;
+        font-family: Microsoft yahei;
+        font-weight: normal;
+    }
+    
+    .coupon_list li .coupon_inf b span {
+        color: #ff6600;
+    }
+    
+    .coupon_list li .coupon_inf s {
+        text-decoration: none;
+        color: #555;
+        font-family: Microsoft yahei;
+    }
+    
+    .coupon_list li.coupon_inf2 .coupon_inf {
+        border-bottom: 2px solid #f80;
+    }
+    /*why us*/
+    
+    .service_inf {
+        background: #f7f7f7;
+        height: 60px;
+        overflow: hidden;
+        padding: 20px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .service_inf li {
+        float: left;
+        width: 290px;
+        line-height: 60px;
+        font: 16px/60px Microsoft yahei;
+    }
+    
+    .service_inf li i {
+        float: left;
+        height: 60px;
+        width: 60px;
+        margin: 0 10px 0 0;
+    }
+    
+    .service_inf li:hover i {
+        -webkit-animation: service_inf 3s infinite linear;
+        animation: service_inf 3s infinite linear;
+    }
+    
+    .booking_email {
+        height: 80px;
+        overflow: hidden;
+        background: #f7f7f7;
+    }
+    
+    .service_agreement {
+        line-height: 80px;
+        padding: 0 10px 0 0;
+    }
+    
+    .service_agreement a {
+        font: 14px/80px Microsoft yahei;
+    }
+    
+    .input_email {
+        width: 680px;
+        margin: 30px auto 0;
+    }
+    
+    .input_email span {
+        font: 16px/30px Microsoft yahei;
+        color: #71829d;
+        padding: 0 5px;
+        float: left;
+    }
+    
+    .input_email input {
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+        float: left;
+        padding: 0 3px;
+        font: 14px/30px Microsoft yahei;
+    }
+    
+    .input_email em input {
+        width: 200px;
+        height: 28px;
+        border: 1px solid #ccc;
+        color: #555;
+    }
+    
+    .input_email b input {
+        width: 80px;
+        background: #3377dd;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    .icon062 {
+        background-position: -576px -131px;
+        width: 24px;
+        height: 24px;
+    }
+    
+    /*d*/
+    
+    @-webkit-keyframes service_inf {
+        0% {
+            -webkit-transform: rotateZ(15deg);
+        }
+        5% {
+            -webkit-transform: rotateZ(-15deg);
+        }
+        10% {
+            -webkit-transform: rotateZ(15deg);
+        }
+        15% {
+            -webkit-transform: rotateZ(-15deg);
+        }
+        20% {
+            -webkit-transform: rotateZ(15deg);
+        }
+        25% {
+            -webkit-transform: rotateZ(-15deg);
+        }
+        30% {
+            -webkit-transform: rotateZ(0deg);
+        }
+        100% {
+            -webkit-transform: rotateZ(0deg);
+        }
+    }
+    
+    @keyframes service_inf {
+        0% {
+            transform: rotateZ(15deg)
+        }
+        5% {
+            transform: rotateZ(-15deg)
+        }
+        10% {
+            transform: rotateZ(15deg)
+        }
+        15% {
+            transform: rotateZ(-15deg)
+        }
+        20% {
+            transform: rotateZ(15deg)
+        }
+        25% {
+            transform: rotateZ(-15deg)
+        }
+        30% {
+            transform: rotateZ(0deg)
+        }
+        100% {
+            transform: rotateZ(0deg)
+        }
+    }
+    </style>
+
+</head>
+
+<body style="zoom: 1;">
+  
+        <style type="text/css">
+        .appWrap {
+            background: url(http://www.elongstatic.com/images/other/app-com.png) no-repeat 0 -483px
+        }
+
+        </style>
+     
+        <style>
+        .pic_auto {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .pic_auto1 {
+            background: url(http://img.elongstatic.com/index/ifold/20150422_ifold1.jpg) no-repeat center 0;
+        }
+        
+        .pic_auto2 {
+            background: url(http://img.elongstatic.com/index/ifold/20150120_ifold2.jpg) no-repeat center 0;
+        }
+        
+        .pic_auto3 {
+            background: url(http://img.elongstatic.com/index/ifold/20150120_ifold3.jpg) no-repeat center 0;
+        }
+        
+        .pic_auto4 {
+            background: url(http://img.elongstatic.com/index/ifold/20150120_ifold4.jpg) no-repeat center 0;
+        }
+        
+        .pic_auto5 {
+            background: url(http://img.elongstatic.com/index/ifold/20150120_ifold5.jpg) no-repeat center 0;
+        }
+        
+        .pic_auto6 {
+            background: url(http://img.elongstatic.com/index/ifold/20150120_ifold6.jpg) no-repeat center 0;
+        }
+        
+        .pic_auto7 {
+            background: url(http://img.elongstatic.com/index/ifold/20150120_ifold7.jpg) no-repeat center 0;
+        }
+        </style>
+        <div class="fold mt20 mb20">
+            <div class="fold_wrap">
+                <ul class="clearfix" id="sm">
+                    <li>
+                        <a href="http://promotion.elong.com/index/fold/fold1/index.html" target="_blank">
+                            <div class="mask_b">
+                                <h4>园林酒店</h4></div>
+                            <div class="pic_auto pic_auto1"></div>
+                            <div class="adv_intro">有谁不爱泡温泉？浸入雾气蒸腾的泉水之中，把身体泡成一片茶叶，舒展轻盈。有比这更美妙的感觉吗？</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.elong.com/promotion/web/fold/fold2/index.html" target="_blank">
+                            <div class="mask_b">
+                                <h4>情侣酒店</h4></div>
+                            <div class="pic_auto pic_auto2"></div>
+                            <div class="adv_intro">浪漫，是香闺围笼里的暧昧，是灯火迷离，泪眼婆裟的唯美，是杨柳岸、晓风残月中的无语凝噎……</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.elong.com/promotion/web/fold/fold3/index.html" target="_blank">
+                            <div class="mask_b">
+                                <h4>设计师酒店</h4></div>
+                            <div class="pic_auto pic_auto3"></div>
+                            <div class="adv_intro">前卫的酒店设计理念，独具魅力的风格，优美的自然风光才能有这样顶级的酒店。</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.elong.com/promotion/web/fold/fold4/index.html" target="_blank">
+                            <div class="mask_b">
+                                <h4>青年旅舍</h4></div>
+                            <div class="pic_auto pic_auto4"></div>
+                            <div class="adv_intro">我为你煮一杯温茶，斟一杯美酒。让我们席地而坐，听你的梦想。用你的只言片语装点我们的梦想博物馆。</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.elong.com/promotion/web/fold/fold5/index.html" target="_blank">
+                            <div class="mask_b">
+                                <h4>特色客栈</h4></div>
+                            <div class="pic_auto pic_auto5"></div>
+                            <div class="adv_intro">在这里，你可以静静发呆，而不被人打扰，只用细细品味它的美好；在这里，你能看见最美好的星星，能让你找到最深的感动。</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.elong.com/promotion/web/fold/fold6/index.html" target="_blank">
+                            <div class="mask_b">
+                                <h4>海岛酒店</h4></div>
+                            <div class="pic_auto pic_auto6"></div>
+                            <div class="adv_intro">不想过冬，厌倦沉重，就飞去热带的岛屿游泳，卸下包袱，放下压力，让自己的身与心，在这碧海蓝天之中，享受一次超自然的洗礼。</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.elong.com/promotion/web/fold/fold7/index.html" target="_blank">
+                            <div class="mask_b">
+                                <h4>海外温泉</h4></div>
+                            <div class="pic_auto pic_auto7"></div>
+                            <div class="adv_intro">因地形地质的区别，世界各地的温泉也千差万别，选择一处适合自己的温泉，5分钟后，你会忘记自己，20分钟后，你会忘记世界。</div>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        <script type="text/javascript">
+        (function() {
+            var slideMenu = function() {
+                var sp, st, t, m, sa, l, w, gw, ot;
+                return {
+                    destruct: function() {
+                        if (m) {
+                            clearInterval(m.htimer);
+                            clearInterval(m.timer);
+                        }
+                    },
+                    build: function(sm, sw, mt, s, sl, h) {
+                        sp = s;
+                        st = sw;
+                        t = mt;
+                        m = document.getElementById(sm);
+                        sa = m.getElementsByTagName('li');
+                        l = sa.length;
+                        w = m.offsetWidth;
+                        gw = w / l;
+                        ot = Math.floor((w - st) / (l - 1));
+                        var i = 0;
+                        for (i; i < l; i++) {
+                            s = sa[i];
+                            s.style.width = gw + 'px';
+                            this.timer(s)
+                        }
+                        if (sl != null) {
+                            m.timer = setInterval(function() {
+                                slideMenu.slide(sa[sl - 1])
+                            }, t)
+                        }
+                    },
+                    timer: function(s) {
+                        s.onmouseover = function() {
+                            clearInterval(m.htimer);
+                            clearInterval(m.timer);
+                            m.timer = setInterval(function() {
+                                slideMenu.slide(s)
+                            }, t);
+                            //console.log($(this).find('.mask_b').html());
+                            $(this).find('.mask_b').hide();
+                            //console.log($(this).find('.mask_b').attr("style"));
+                        }
+                        s.onmouseout = function() {
+                            clearInterval(m.timer);
+                            clearInterval(m.htimer);
+                            m.htimer = setInterval(function() {
+                                slideMenu.slide(s, true)
+                            }, t);
+                            //console.log($(this).find('.mask_b').html());
+                            $(this).find('.mask_b').show();
+                            //console.log($(this).find('.mask_b').attr("style"));
+                        }
+                    },
+                    slide: function(s, c) {
+                        var cw = parseInt(s.style.width);
+                        if ((cw < st && !c) || (cw > gw && c)) {
+                            var owt = 0;
+                            var i = 0;
+                            for (i; i < l; i++) {
+                                if (sa[i] != s) {
+                                    var o, ow;
+                                    var oi = 0;
+                                    o = sa[i];
+                                    ow = parseInt(o.style.width);
+                                    if (ow < gw && c) {
+                                        oi = Math.floor((gw - ow) / sp);
+                                        oi = (oi > 0) ? oi : 1;
+                                        o.style.width = (ow + oi) + 'px';
+                                        //console.log(o);
+                                        //console.log(o.style.width);
+                                    } else if (ow > ot && !c) {
+                                        oi = Math.floor((ow - ot) / sp);
+                                        oi = (oi > 0) ? oi : 1;
+                                        o.style.width = (ow - oi) + 'px';
+                                        //console.log(o);
+                                        //console.log(o.style.width);
+                                    }
+                                    if (c) {
+                                        owt = owt + (ow + oi)
+                                    } else {
+                                        owt = owt + (ow - oi)
+                                    }
+                                }
+                            }
+                            s.style.width = (w - owt) + 'px';
+                        } else {
+                            if (m.htimer)
+                                clearInterval(m.htimer)
+                            if (m.timer)
+                                clearInterval(m.timer);
+                        }
+                    }
+                };
+            }();
+            slideMenu.build('sm', 400, 10, 10, 1);
+        })();
+        </script>
+        
+</body>
+
+</html>
